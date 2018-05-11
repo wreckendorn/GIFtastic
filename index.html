@@ -1,0 +1,118 @@
+<!doctype = html>
+<html>
+<head>
+    <title>Dance Machine</title>
+    <!-- Reset CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- bootstrap jquery, jquery, and popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+      <!-- bootstrap CSS, Google Fonts, and my CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css">   -->
+    <style>
+        body, html {
+           height: 100%;
+           background-color: #00FFFF;
+           font-family: 'PT Sans', sans-serif;
+        }
+
+        .bg { 
+    /* The image used */
+    background-image: url("assets/images/silhouette.png");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+        .buttonDiv {
+            font-size: 16px;
+            overflow: hidden;
+            color: white;        }
+        .gif {
+            background-color: #DAF7A6;
+            height: 200px;
+        }
+
+        p {
+            color: white;
+            height: 20px;
+        }
+
+        #userButton {
+            background-color: #FF0033;
+        }
+            #userButton span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+            }
+
+            #userButton span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+            }
+
+            #userButton:hover span {
+            padding-right: 25px;
+            }
+
+            #userButton:hover span:after {
+            opacity: 1;
+            right: 0;
+            }
+                    
+
+        .rating {
+            opacity: 0.5;
+            background-color: #FF7733;
+        }
+    </style>
+</head>
+<body>
+    <div class = "bg">
+    <div class = "container">
+        <div class = "row firstRow">
+
+        </div>
+        <div class = "row formRow mb-5">
+            <form>
+                <div class="form-group mt-5">
+                  <label for="exampleDanceInput">Who do you want to see dance?</label>
+                  <input type="text" class="form-control" id="exampleDanceInput" aria-describedby="emailHelp" placeholder="Christopher Walken">
+                  <small id="danceButtonHelp" class="form-text text-muted">Enter your dance command and hit the Dance button.</small>
+                </div>
+                <button type="submit" class="btn text-white" id="userButton"><span>Dance</span></button>
+              </form>
+        </div>
+
+        <div class = "row secondRow">
+
+        </div>
+            
+    </div>
+    
+    <audio autoplay>
+            <source src= "assets/sounds/BackgroundAudio.mp3" type="audio/mpeg" />
+          </audio>
+
+  <!-- jQuery JS -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+  <!-- Code to the JavaScript File -->
+  <script src="assets/javascript/app.js"></script>
+</div>
+</body>
+
+</html>
